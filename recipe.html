@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Food</title>
+    
+</head>
+<body>
+    <head>
+        <title>food</title>
+    </head>
+    <ingredients>
+        <label>
+            <input placeholder="ingredients"></input>
+        </label>
+    </ingredients>
+    <fridge>
+        <ul>
+            <li class= "ingrediant"></li>
+        </ul>
+    </fridge>
+</body>
+<script>
+    
+    var ingredients = ['rice','chicken','mushroom'];
+    var request = fetch('https://api.spoonacular.com/recipes/complexSearch?query=' + ingredients + '&apiKey=604863b3b99545f18714e43387c170ea').then(function(response){
+        return(response.json())
+    })
+    .then(function(data){
+        console.log(data);
+    });
+
+
+
+    /*fetch('https://api.spoonacular.com/recipes/complexSearch?query=rice&apiKey=604863b3b99545f18714e43387c170ea').then(function(response){
+        return(response.json())
+    })
+    .then(function(data){
+        console.log(data);
+    });*/
+</script>
+<footer></footer>
+</html>
