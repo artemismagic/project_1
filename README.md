@@ -8,3 +8,28 @@ Developers :
 - Courtney Williams
 - Clutch Cliff
 
+
+Keto
+Sustainable
+Vegan
+Vegetarian
+Dairy Free
+Gluten Free
+Allergan 
+
+Instructions
+Ready in Minutes
+Dish Type
+Title
+Author
+Image
+
+JS Scripts Endpoints
+- Recipes
+- 1 Search Recipes
+- 2 Search Recipes by Ingredients
+- 3 Get Recipe Information 
+- 4 Get Similar Recipes
+- 5 Get Random Recipes
+- Ingredients
+-  
