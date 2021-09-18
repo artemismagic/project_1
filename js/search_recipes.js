@@ -15,7 +15,7 @@ document.querySelector('#food').addEventListener('keypress', function (event) {
         queryList.push(food.value);
         console.log (queryList);
         food.value = " ";
-        var request = fetch('https://api.spoonacular.com/recipes/complexSearch?query=' + queryList + '&apiKey=f5ee2e3ba0cc4a3abad3369a8d4f7db3').then(function(response){
+        var request = fetch('https://api.spoonacular.com/recipes/complexSearch?query=' + queryList + '&number=9&apiKey=f5ee2e3ba0cc4a3abad3369a8d4f7db3').then(function(response){
         return(response.json())
         })
         .then(function(data){
