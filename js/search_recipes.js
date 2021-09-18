@@ -12,7 +12,7 @@ document.querySelector('#food').addEventListener('keypress', function (event) {
         event.preventDefault();
         console.log (food.value);
         var resetList = document.querySelectorAll('img');
-        resetList.removeAll();
+        resetList.remove();
         var ingredient = document.createElement('li');
         ingredient.innerHTML = food.value;
         ingredient.id = food.value;
