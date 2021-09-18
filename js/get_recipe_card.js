@@ -1,5 +1,6 @@
  //add html element id and classes here
  var getRecipeCard= document.getElementById('getCard');
+ console.log(getRecipeCard);
  
  //function to add data to fridge list as well as the queryList, then submits request.  to do: populate recipe cards with results
      
