@@ -11,8 +11,6 @@ document.querySelector('#food').addEventListener('keypress', function (event) {
     if (event.key==='Enter') {
         event.preventDefault();
         console.log (food.value);
-        var resetList = document.querySelectorAll('img');
-        resetList.remove();
         var ingredient = document.createElement('li');
         ingredient.innerHTML = food.value;
         ingredient.id = food.value;
@@ -20,7 +18,7 @@ document.querySelector('#food').addEventListener('keypress', function (event) {
         var removeButton = document.createElement('button');
         removeButton.innerHTML = 'x';
         removeButton.addEventListener('click', function(event){
-             event.preventDefault();
+            event.preventDefault();
             console.log(event.target);
             console.log(event.target.parentElement.id);
             var removeIngredient = event.target.parentElement.id;
@@ -39,11 +37,15 @@ document.querySelector('#food').addEventListener('keypress', function (event) {
             })
             .then(function(data){
                 console.log(data);
+                document.querySelectorAll('.img').forEach(e => e.remove());
+                document.querySelectorAll('.title').forEach(e => e.remove());
                 for (i = 0; i < 9; i++){
                     var page = document.createElement('img');
                     var pageTitle = document.createElement('div');
                     page.src = data[i].image;
                     page.id = data[i].id;
+                    page.classList.add('img');
+                    pageTitle.classList.add('title');
                     pageTitle.innerHTML = data[i].title;
                     console.log(page);
                     recipeBook.append(page);
