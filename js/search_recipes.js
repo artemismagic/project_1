@@ -14,6 +14,9 @@ document.querySelector('#food').addEventListener('keypress', function (event) {
     if (event.key==='Enter') {
         event.preventDefault();
         console.log (food.value);
+        //document.getElementById("getCard").onclick=()=> {
+            localStorage.setItem("ingredient", JSON.stringify(food.value));
+        //}
         var ingredient = document.createElement('li');
         ingredient.innerHTML = food.value;
         ingredient.id = food.value;
@@ -25,7 +28,7 @@ document.querySelector('#food').addEventListener('keypress', function (event) {
             var removeIngredient = event.target.parentElement.id;
             queryList.splice(removeIngredient, 1);
             document.getElementById(removeIngredient).remove();
-            var request = fetch('https://api.spoonacular.com/recipes/findByIngredients?ingredients=' + queryList + '&number=9&apiKey=f5ee2e3ba0cc4a3abad3369a8d4f7db3').then(function(response){
+            var request = fetch('https://api.spoonacular.com/recipes/findByIngredients?ingredients=' + queryList + '&number=9&apiKey=5a06a914999c434890b47411bab5e301').then(function(response){
             return(response.json())
             })
             .then(function(data){
@@ -47,9 +50,11 @@ document.querySelector('#food').addEventListener('keypress', function (event) {
         });
         ingredient.append(removeButton);
         queryList.push(food.value);
+
+        
         console.log (queryList);
         food.value = " ";
-        var request = fetch('https://api.spoonacular.com/recipes/findByIngredients?ingredients=' + queryList + '&number=9&apiKey=f5ee2e3ba0cc4a3abad3369a8d4f7db3').then(function(response){
+        var request = fetch('https://api.spoonacular.com/recipes/findByIngredients?ingredients=' + queryList + '&number=9&apiKey=5a06a914999c434890b47411bab5e301').then(function(response){
             return(response.json())
             })
             .then(function(data){
@@ -67,7 +72,7 @@ document.querySelector('#food').addEventListener('keypress', function (event) {
                     console.log(page);
                     page.addEventListener('click', function(event){
                         event.preventDefault();
-                        var recipeCard =  fetch('https://api.spoonacular.com/recipes/'+event.target.id+'/card?apiKey=f5ee2e3ba0cc4a3abad3369a8d4f7db3')
+                        var recipeCard =  fetch('https://api.spoonacular.com/recipes/'+event.target.id+'/card?apiKey=5a06a914999c434890b47411bab5e301')
                             .then(function(response){
                                 return(response.json())
                             })
