@@ -3,6 +3,9 @@ var food = document.getElementById('food');
 var fridge = document.getElementById('fridge');
 var queryList = [];
 var recipeBook = document.getElementById('recipeBook');
+var cardModal = document.getElementById('modalBox');
+
+
 
 
 //function to add data to fridge list as well as the queryList, then submits request.  to do: populate recipe cards with results
@@ -62,6 +65,37 @@ document.querySelector('#food').addEventListener('keypress', function (event) {
                     pageTitle.classList.add('title');
                     pageTitle.innerHTML = data[i].title;
                     console.log(page);
+                    page.addEventListener('click', function(event){
+                        event.preventDefault();
+                        var recipeCard =  fetch('https://api.spoonacular.com/recipes/'+event.target.id+'/card?apiKey=f5ee2e3ba0cc4a3abad3369a8d4f7db3')
+                            .then(function(response){
+                                return(response.json())
+                            })
+                            .then(function(data){
+                                console.log(data.url);
+                                var cardImage = document.createElement('img');
+                                var modalContent = document.getElementById('modal-content');
+                                modalContent.innerHTML = '';
+                                cardImage.classList.add('cardImage');
+                                cardImage.src = data.url;
+                                console.log(cardImage);
+                                var span = document.createElement('span');
+                                span.classList.add('close');
+                                span.innerHTML = '&times;';
+                                span.addEventListener('click', function (event){
+                                    event.preventDefault();
+                                    cardModal.style.display = 'none';
+                                });
+                                
+                                console.log(modalContent);
+                                modalContent.appendChild(span);
+                                modalContent.appendChild(cardImage);
+                                cardModal.style.display = "block";
+                                
+                            });
+                        
+
+                    })
                     recipeBook.append(page);
                     recipeBook.append(pageTitle);
                 };
@@ -72,10 +106,6 @@ document.querySelector('#food').addEventListener('keypress', function (event) {
 
         
     //api call syntax
-
-
-
-
 /*fetch('https://api.spoonacular.com/recipes/complexSearch?query=rice&apiKey=604863b3b99545f18714e43387c170ea').then(function(response){
     return(response.json())
     })
