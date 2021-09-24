@@ -63,7 +63,11 @@ button:hover{
 transform: translate(-50px,0px);
 }
 /*css for the cards is below*/
+<<<<<<< HEAD
 #card-container{
+=======
+.card-container{
+>>>>>>> bba7762553cf7d3a24b8a160fe677703419d1735
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     padding: 60px;
@@ -149,13 +153,19 @@ transform: translate(-50px,0px);
 li{
     list-style-type: none;
 }
+<<<<<<< HEAD
 /*-----------------remove button styling-------------------*/
 .remove-Btn{
     text-decoration:none;
+=======
+#form-div li::after{
+    content: "✖";
+>>>>>>> bba7762553cf7d3a24b8a160fe677703419d1735
     font-size: 1.15em;
     color: var(--main-color);
     padding-left:10px;
 }
+<<<<<<< HEAD
 button {
     display: inline-block;
     border: none;
@@ -174,6 +184,8 @@ button {
     color:red;
 }
 /*-------------------------------------------------------*/
+=======
+>>>>>>> bba7762553cf7d3a24b8a160fe677703419d1735
 .side-bar{
     padding-bottom:12%;
 }
@@ -187,6 +199,7 @@ button {
 .hide {
     display: none;
 }
+<<<<<<< HEAD
 #fact-container{
 display:block;
 text-align: center;
@@ -208,6 +221,18 @@ padding-bottom:1%;
 
 @media screen and (max-width:1300px){
     #card-container{
+=======
+/* 
+.close{
+
+}
+.modal{
+
+} */
+
+@media screen and (max-width:1300px){
+    .card-container{
+>>>>>>> bba7762553cf7d3a24b8a160fe677703419d1735
         grid-template-columns: 1fr 1fr;
     }
     .card{
@@ -224,7 +249,11 @@ padding-bottom:1%;
  }
 
   @media screen and (max-width:800px){
+<<<<<<< HEAD
     #card-container{
+=======
+    .card-container{
+>>>>>>> bba7762553cf7d3a24b8a160fe677703419d1735
         grid-template-columns: 1fr;
         max-width:75%;
         padding-left:10%;

@@ -4,15 +4,13 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<<<<<<< HEAD
     <!-- <link rel="stylesheet" href="./reset.css"> -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Fleur+De+Leah&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="./css/uikit.min.css"/>
-    <script src="./js/uikit.min.js"></script>
-    <script src="./js/uikit-icons.min.js"></script>
-    <link rel = "stylesheet" href = "modal.css"></link>
+    <link rel="stylesheet" href="./GETUIKIT/uikit-3.7.3/css/uikit.min.css"/>
+    <script src="./GETUIKIT/uikit-3.7.3/js/uikit.min.js"></script>
+    <script src="./GETUIKIT/uikit-3.7.3/js/uikit-icons.min.js"></script>
     <link rel="stylesheet" type="text/css" href="style.css">
     <title>Tu Le Creés</title>
 </head>
@@ -45,7 +43,7 @@
                             </div>
                             <div class="uk-modal-body" uk-overflow-auto>
                                 <!-- here is where the saved recipes will actually go, in place of this paragraph -->
-                                <p id = "gotRecipes">You have no saved recipes! :( </p>
+                                <p>You have no saved recipes! :( </p>
                             </div>
                             <div class="uk-modal-footer uk-text-right">
                                 <button class="uk-button uk-button-default uk-modal-close" type="button">Close</button>
@@ -59,11 +57,11 @@
          </div>
         </header>
      <section class="hero hero-image ">
-         <button class="uk-button uk-button-secondary uk-button-large get-started-btn hero-text" id="getStarted">Let's Get Started!
+         <button class="uk-button uk-button-secondary uk-button-large get-started-btn hero-text hide">Let's Get Started!
          </button>
 
          <!-- this is the form with the class hide that shows when you press the button above-->
-         <div class="form-container container hide" id="show-form">
+         <div class="form-container container ">
              <form id="form">
                 <div id="form-div">
                     <label>List any ingredients you have here with commas in between (Proteins, vegetables, fruits):</label>
@@ -71,9 +69,9 @@
                     <br>
                     <input type="text" placeholder="Ingredients" id="food">
                     <ul id="fridge"> 
-                        <!-- <li class="ingredient">Example Ingredient 1</li>
+                        <li class="ingredient">Example Ingredient 1</li>
                         <li class="ingredient">Example Ingredient 2</li>
-                        <li class="ingredient">Example Ingredient 3</li> -->
+                        <li class="ingredient">Example Ingredient 3</li>
                     </ul> 
                 </div>
             </form>
@@ -81,8 +79,8 @@
         </section> 
         
         <!-- this div contains all of the cards -->
-        <div id="card-container">
-           <!-- <section class="card">
+        <div class="card-container">
+            <section class="card">
                 <header>Pumpkin Soup</header>
                 <img class="card-img" src="./images/Fall-Recipe-1-img.png" alt="recipe-1" />
             </section>
@@ -97,15 +95,13 @@
             </section>
             <section class="card">
                 <header>Salsa</header>
-                <img src="./images/ingredients-2.jpeg" alt="recipe-1" /> 
-            </section> -->
+                <img src="./images/ingredients-2.jpeg" alt="recipe-1" />
+            </section>
         </div>
         <h3 id="explore" >Explore More!</h3>
         <hr>
         <br>
-        <div id="fact-container">
-            <button id="random-facts">Press Me for a Surprise!</button></div>
-            <br>
+
         <!-- Below is the scroll container at the bottom of the page -->
      <div id="scroll-container">
          <div class="uk-position-relative uk-light" uk-slideshow>
@@ -131,49 +127,12 @@
             </div>
         </div>
     </div>
-    <div id = "modalBox" class = "modal">
-        <div id = "modal-content"></div>
-        </div>
     <br>
     <br>
     <br>
     <footer id="copyright">
-        copyright group 7 <a href="" uk-totop></a>
+        copyright group 7
     </footer>
     <script rel="javascript" src="script.js"></script>
-    <script src="./js/search_recipes.js"></script>
-    <script src="./js/get_recipe_card.js"></script>
-    <script src="./js/local_storage.js"></script>
 </body>
-=======
-    <title>Food</title>
-    <link rel = "stylesheet" href = "modal.css"></link>
-</head>
-<body>
-    <head>
-        <title>food</title>
-    </head>
-    <form>
-        <label>
-            <input type="text" placeholder="ingredients" id="food"></input>
-        </label>
-        <button id="getCard">Get Recipe</button>
-    </form>
-    <fridge>
-        <ul id="fridge">
-            
-        </ul>
-    </fridge>
-    <div id= "recipeBook"></div>
-    <div id = "modalBox" class = "modal">
-        <div id = "modal-content">
-            
-        </div>
-    </div>
-</body>
-<script src="./js/search_recipes.js"></script>
-<script src="./js/get_recipe_card.js"></script>
-
-<footer></footer>
->>>>>>> bba7762553cf7d3a24b8a160fe677703419d1735
 </html>
