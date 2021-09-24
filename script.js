@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 
 console.log (document.body)
 
@@ -13,6 +12,3 @@ randomFact.addEventListener('click', function (event) {
         randomFact.innerHTML = data;
         });
     });
-=======
-console.log (document.body)
->>>>>>> bba7762553cf7d3a24b8a160fe677703419d1735
